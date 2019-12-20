@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>item count</title>
+</head>
+<body>
+	<h1>total display of two items</h1>
+	<form>
+		<table border="2">
+			<tr>
+				<th>ITEM</th>
+				<th>PRICE</th>
+				<th>QUANTITY</th>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="item name"></td>
+				<td><select id="s1">
+					<option value='1'>$1</option>
+					 <option value="2">$2</option>
+				</select></td>
+				<td><input type="number" min="0" id="q1"></td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="item name"></td>
+				<td><select id="s2">
+					<option value='1'>$1</option>
+					 <option value="2">$2</option>
+				</select></td>
+				<td><input type="number" min="0" id="q2"></td>
+			</tr>
+		</table>
+		<button onclick="total(); return false;">total amt</button><br>
+		<input type="submit" value="pay" onclick="pay()">
+	</form>
+<script type="text/javascript">
+	var tot;
+    function total(){
+    	var s1=document.getElementById('s1').value;
+    	var s2=document.getElementById('s2').value;
+    	var q1=document.getElementById('q1').value;
+    	var q2=document.getElementById('q2').value;
+    	tot=Number(s1)*Number(q1)+Number(s2)*Number(q2);
+    	return false;
+    }
+    function pay(){alert('you have paid :'+tot+' dollars')}
+</script>
+</body>
+</html>

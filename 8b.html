@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient management system</title>
+</head>
+<body>
+   <h1>Welcome to the patient management system of <span id="hos1"></span> hopsital</h1>
+   <p>This is a branch of <span id="hos"></span> hospital located in <span id="ar"></span> of southern bangalore</p>
+   <table border="1">
+   	 <tr>
+   	 	<td><span onmouseover="cal(this)" onmouseout="cal1(this)">Patients Details</span></td>
+   	 	<td><textarea cols="40" rows="10" id="d1"></textarea></td>
+   	 </tr>
+   </table>
+ <script type="text/javascript">
+ 	var pat={
+ 		    "name":"ashay",
+ 		    "AN":"6881",
+ 		    "test":['BT','ECHO','CT']
+ 	};
+ 	var hos={
+ 		"name":"Narayana Hrudayala",
+ 		"Location":"Richmond Town"
+ 	};
+
+ 	document.getElementById('hos1').innerHTML=hos['name'];
+ 	document.getElementById('hos').innerHTML=hos['name'];
+ 	document.getElementById('ar').innerHTML=hos['Location'];
+
+ 	function cal(x){
+ 		x.style.color='blue';
+ 		document.getElementById('d1').innerHTML="Name of the Patient is "+pat['name']+" admitted in "+hos['name']+" has the AN :"+pat['AN']+" and has been conducted with these scans :"+pat['test'][0]+" "+pat['test'][1]+" "+pat['test'][2];
+ 	}
+ 	function cal1(x){
+ 		x.style.color='black';
+ 		document.getElementById('d1').innerHTML='';
+
+ 	}
+
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <input type="submit" onclick="show()" value="details">	
+  <table border="1">
+    <tr><td>NAME :<span id="name"></span></td></tr>
+    <tr><td>NATIVE :<span id="native"></span></td></tr>
+    <tr><td>STORY :<span id="span"></span></td></tr>
+    <tr><td>Year :<span id="year"></span></td></tr>
+  </table>
+  <input type="submit" onclick="show1()" value="details" ">
+  <div>
+  	  <h3>author details</h3>
+  	    NAME :<span id="name1"></span><br>
+    NATIVE :<span id="native1"></span><br>
+   STORY :<span id="span1"></span><br>
+    Year :<span id="year1"></span><br>
+
+
+  </div>
+
+<script type="text/javascript">
+	var obj={
+         "author1":{"name":"chethan","native":"indian","story":"pk","year":2019 },
+         "author2":{"name":"bucket","native":"indian","story":"pk","year":2019 }  
+
+	}
+
+	function show(){
+		document.getElementById('name').innerHTML=obj['author1']['name']
+		document.getElementById('native').innerHTML=obj['author1']['native']
+		document.getElementById('span').innerHTML=obj['author1']['story']
+		document.getElementById('year').innerHTML=obj['author1']['year']
+	}
+	function show1(){
+		document.getElementById('name1').innerHTML=obj['author2']['name']
+		document.getElementById('native1').innerHTML=obj['author2']['native']
+		document.getElementById('span1').innerHTML=obj['author2']['story']
+		document.getElementById('year1').innerHTML=obj['author2']['year']
+	}
+
+</script>
+</body>
+</html>

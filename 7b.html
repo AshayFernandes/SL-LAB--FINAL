@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vehicle detail</title>
+</head>
+<body>
+
+	<h1>hover the mouse over the text to find the details about the vehicles</h1>
+	<table border="2">
+		<tr>
+			<th>MODEL</th>
+			<th>DETAILS</th>
+		</tr>
+		<tr>
+			<td id="ford" onmouseover="cal(this)" onmouseout="cal1(this)">FORD</td>
+			<td><textarea rows='10' cols="35" id="d1"></textarea></td>
+		</tr>
+		<tr>
+			<td id="merc" onmouseover="calm(this)" onmouseout="calm1(this)">MERC</td>
+			<td><textarea rows='10' cols="35" id="d2"></textarea></td>
+		</tr>
+
+	</table>
+<script type="text/javascript">
+	var obj=[
+                {"model":"ford","name":"mustang","price":"2000","year":"2019"},
+                {"model":"mercedes","name":"s-class","price":"5000","year":"2020"} 
+	];
+	function cal(x){
+		x.style.fontSize="25px"
+		var y=document.getElementById('d1');
+		y.innerHTML="the model is "+obj[0]['model']+" and the name of series is "+obj[0]['name']+" it is a model of "+obj[0]['year']+" with a base price of "+obj[0]['price'];
+	}
+	function cal1(x){
+		x.style.fontSize="1em"
+		var y=document.getElementById('d1');
+		y.innerHTML=""
+
+	}
+
+	function calm(x){
+		x.style.fontSize="25px"
+		var y=document.getElementById('d2');
+		y.innerHTML="the model is "+obj[1]['model']+" and the name of series is "+obj[1]['name']+" it is a model of "+obj[1]['year']+" with a base price of "+obj[1]['price'];
+
+	}
+	function calm1(x){
+		x.style.fontSize="1em"
+		var y=document.getElementById('d2');
+		y.innerHTML=""
+
+	}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>price entry</title>
+</head>
+<body>
+	<h1>{{msg}}</h1>
+	<h1>{{amt}}</h1>
+	<form action="{{url_for('start')}}" method='POST'>
+		<table border=1>
+			<tr>
+				<th>item</th>
+				<th>quantity</th>
+			</tr>
+			<tr>
+				<td><input type="text" name="item1"></td>
+				<td><input type="text" name="p1" ></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="item2"></td>
+				<td><input type="text" name="p2" ></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="item3"></td>
+				<td><input type="text" name="p3" ></td>
+			</tr>
+			
+		</table>
+		<br><br>
+		<input type="submit" name="ic" value="price">
+		
+
+	</form>
+
+</body>
+</html>
